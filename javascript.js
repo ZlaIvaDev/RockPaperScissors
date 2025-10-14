@@ -28,28 +28,33 @@ function get_computer_choice() {
 }
 
 function rps() {
+    while (round < 6) {
+        console.log(`it's round ${round}`)
+        let me = get_human_choice()
+        let com = get_computer_choice()
 
-    console.log(`it's round ${round}`)
-    let me = get_human_choice()
-    let com = get_computer_choice()
+        if (me === com){
+            console.log('its a tie!')
+            
+            /*round++*/
+        } else if (me === 'rock' && com === 'paper' || me === 'paper' && com === 'scissors' || me === 'scissors' && com === 'rock') {
+            console.log(`${com} beats ${me}! You lose!`)
+            com_score++
+            
+            /*round++*/
+            
+        } else {
+            console.log(`${me} beats ${com}! You win!`)
+            my_score++
+            
+            /*round++*/
 
-    if (me === com){
-        console.log('its a tie!')
-        console.log(`${my_score}:${com_score}`)
+        }
         round++
-    } else if (me === 'rock' && com === 'paper' || me === 'paper' && com === 'scissors' || me === 'scissors' && com === 'rock') {
-        console.log(`${com} beats ${me}! You lose!`)
-        com_score++
-        console.log(`${my_score}:${com_score}`)
-        round++
-        
-    } else {
-        console.log(`${me} beats ${com}! You win!`)
-        my_score++
-        console.log(`${my_score}:${com_score}`)
-        round++
-
-    }
+        console.log(`Current score is ${my_score}:${com_score}`)
+    } 
+    console.log(`Game Over!`)
+    console.log(`final score is ${my_score}:${com_score}`)
 }
 
 /* sledeci zadatak je da podesis Skor ! 
