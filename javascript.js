@@ -6,7 +6,7 @@ let com_score = 0;
 let score = `score is :${my_score}:${com_score}`;
 
 function get_human_choice() {
-    const choice = prompt("enter your choice: ")
+    
     console.log(`your choice is ${choice}`)
     return choice
 
@@ -28,8 +28,8 @@ function get_computer_choice() {
 }
 
 function rps() {
-    while (round < 6) {
-        console.log(`it's round ${round}`)
+    //while (my_score < 5 || com_score < 5) {
+        //console.log(`it's round ${round}`)
         let me = get_human_choice()
         let com = get_computer_choice()
 
